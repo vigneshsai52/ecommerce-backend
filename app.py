@@ -5,6 +5,10 @@ import datetime
 from functools import wraps
 
 app = Flask(__name__)
+@app.route("/")
+def home():
+    return "E-commerce Backend API is running"
+
 app.config["SECRET_KEY"] = "supersecretkey"
 
 # ---------------- DB ----------------
