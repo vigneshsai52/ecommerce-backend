@@ -1,56 +1,71 @@
-E-COMMERCE BACKEND API
+E-Commerce Backend API
 
-A secure and scalable E-Commerce backend built using Flask, featuring JWT authentication,
-RESTful APIs, and SQLite database. The application is deployed on Render cloud.
-
---------------------------------------------------
-
-FEATURES
-- User Registration and Login
-- JWT-based Authentication
-- Product Listing API
-- Add to Cart and View Cart (Protected Routes)
-- SQLite Database Integration
-- Deployed on Render
+Overview
+This project is a RESTful backend API for an e-commerce application built using Flask.
+It supports secure user authentication, product listing, and cart management.
+The application follows clean REST principles and focuses on secure backend design.
 
 --------------------------------------------------
 
-TECH STACK
-Backend: Python, Flask
-Authentication: JSON Web Tokens (JWT)
-Database: SQLite
-Deployment: Render
-Tools: Git, GitHub, Postman
+Features
+- User registration and login
+- JWT-based authentication
+- Protected routes for cart operations
+- Product listing APIs
+- SQLite database integration
+- Secure password handling
+- Deployed on Render cloud platform
 
 --------------------------------------------------
 
-API ENDPOINTS
-
-POST    /register      -> Register new user
-POST    /login         -> Login and get JWT token
-GET     /products      -> Fetch product list
-POST    /cart/add      -> Add product to cart (JWT required)
-GET     /cart          -> View cart (JWT required)
-
---------------------------------------------------
-
-AUTHENTICATION HEADER FORMAT
-
-Authorization: Bearer <JWT_TOKEN>
+Tech Stack
+- Programming Language: Python
+- Framework: Flask
+- Authentication: JWT (JSON Web Tokens)
+- Database: SQLite
+- Deployment: Render (Gunicorn)
+- Tools: Postman, Git, GitHub
 
 --------------------------------------------------
 
-LIVE DEPLOYED URL
+How to Run Locally
 
-https://ecommerce-backend-b9ra.onrender.com
+Step 1: Clone the repository
+git clone https://github.com/vigneshsai52/ecommerce-backend.git
+cd ecommerce-backend
 
---------------------------------------------------
-
-RUN LOCALLY
-
+Step 2: Install dependencies
 pip install -r requirements.txt
+
+Step 3: Run the application
 python app.py
 
+The API will start running on:
+http://127.0.0.1:5000
+
 --------------------------------------------------
 
+Authentication Flow
+- Users register and login using API endpoints
+- On successful login, a JWT token is generated
+- Token must be included in request headers for protected routes
 
+--------------------------------------------------
+
+API Testing
+- All APIs were tested using Postman
+- JWT tokens were validated for protected endpoints
+
+--------------------------------------------------
+
+Deployment
+- Deployed on Render using Gunicorn
+- Environment configured for production-ready execution
+
+--------------------------------------------------
+
+Learning Outcomes
+- Hands-on experience with REST API design
+- Implemented secure authentication using JWT
+- Understood backend deployment workflow
+- Improved understanding of API testing and security basics
